@@ -11,13 +11,12 @@ Spring Security &amp; Register Using sql Authorization & Authentication using Us
             
 # Url Mapping :
             
-            http://localhost:4000/register      ----> register(role : either USER (OR) ADMIN) still validation remaining 
-            http://localhost:4000/secured/loginUser       ----> for User Role Login
-            http://localhost:4000/secured/login           ----> for Admin Role Login  
-            
-            Note: Register first and then use other urls (change application.properties according to your db config)
- 
+       http://localhost:4000/register      ----> register(role : either USER (OR) ADMIN) still validation remaining 
+       http://localhost:4000/secured/loginUser       ----> for User Role Login
+       http://localhost:4000/secured/login           ----> for Admin Role Login  
+       Note: Register first and then use other urls (change application.properties according to your db config)
+        attached(sql.txt)
 # command 
            mvn clean install   
-           attached(sql.txt)
+           
                
