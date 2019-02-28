@@ -1,0 +1,28 @@
+/***************************************************SQLDB CONFIG COMMANDS***********************************************************************************************************************************/
+
+CREATE TABLE user_table(user_id   INT  IDENTITY  NOT NULL, email  VARCHAR(100)      ,       username  VARCHAR (25) ,  name   VARCHAR (20), password VARCHAR(100)  , PRIMARY KEY (user_id));
+
+
+CREATE TABLE role_table( role_id   INT  IDENTITY  NOT NULL,   role varchar(20),   PRIMARY KEY (role_id));
+
+
+CREATE TABLE user_role_model(role_id   INT   NOT NULL,   user_id   INT   NOT NULL,   FOREIGN KEY (role_id) REFERENCES role_table(role_id),   FOREIGN KEY (user_id) REFERENCES user_table(user_id));
+
+
+  before inserting sql hibernate spring application.properties change into create automatically it will create user_role_model then stop the application insert 
+
+  before application.properties spring.jpa.ddl-auto=create
+
+INSERT INTO  user_table(user_id,  email,username, name, password) VALUES (1,'admin@gmail.com','s','Sam','sam')
+
+
+insert into role_table(role_id, role)VALUES (1,'ADMIN')
+
+
+insert into user_role_model(role_id,user_id) values (1,1)
+
+
+ then add application.properties.ddl-auto=update
+
+/********************************************************************************************************************************************************************************************/
+

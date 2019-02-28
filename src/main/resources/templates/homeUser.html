@@ -1,0 +1,14 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Login</title>
+</head>
+<body>
+            Logged As User  <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+            
+            
+            <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+            </form>
+</body>
+</html>
