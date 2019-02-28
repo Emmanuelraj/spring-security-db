@@ -15,5 +15,8 @@ Spring Security &amp; Register Using sql Authorization & Authentication using Us
             http://localhost:4000/secured/loginUser       ----> for User Role Login
             http://localhost:4000/secured/login           ----> for Admin Role Login  
             
-            Note: Register first and then use other urls
+            Note: Register first and then use other urls (change application.properties according to your db config)
+ 
+# command 
+           mvn clean install   
                
